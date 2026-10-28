@@ -88,3 +88,15 @@ class WebTests(unittest.TestCase):
         self.assertIn(b'LAB-004 on vpn-gateway first', html)
         self.assertIn(b'&lt;img', html)
         self.assertNotIn(b'<img src=x', html)
+
+    def test_public_export_has_no_mutation_forms_or_private_database(self):
+        from scripts.build_demo import build
+        output = build(Path(self.temp.name) / 'public-demo')
+        self.assertEqual(len(list(output.glob('finding-*.html'))), 11)
+        for page in output.glob('*.html'):
+            html = page.read_text(encoding='utf-8')
+            self.assertNotIn('name="csrf"', html)
+            self.assertNotIn('method="post"', html)
+            self.assertNotIn('Browser QA', html)
+            self.assertNotIn('href="/finding/', html)
+        self.assertFalse(list(output.glob('*.db')))

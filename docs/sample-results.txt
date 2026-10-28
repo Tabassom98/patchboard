@@ -1,0 +1,39 @@
+Severity-only: LAB-003, LAB-002, LAB-009, LAB-005, LAB-006
+
+default: top-five overlap 60%
+ 1 LAB-001 student-portal       score=104.60 movement=+5
+ 2 LAB-004 vpn-gateway          score=101.00 movement=+5
+ 3 LAB-005 staff-laptop-07      score= 78.80 movement=+1
+ 4 LAB-002 build-runner         score= 76.80 movement=-2
+ 5 LAB-006 library-search       score= 73.20 movement=+0
+ 6 LAB-010 research-api         score= 70.20 movement=+3
+ 7 LAB-008 payment-worker       score= 68.40 movement=+1
+ 8 LAB-003 archive-test         score= 60.00 movement=-7
+ 9 LAB-009 training-vm          score= 57.00 movement=-6
+10 LAB-007 metrics-internal     score= 51.00 movement=+0
+
+no exposure weight: top-five overlap 40%
+ 1 LAB-001 student-portal       score= 92.60 movement=+5
+ 2 LAB-004 vpn-gateway          score= 89.00 movement=+5
+ 3 LAB-005 staff-laptop-07      score= 78.80 movement=+1
+ 4 LAB-002 build-runner         score= 76.80 movement=-2
+ 5 LAB-008 payment-worker       score= 68.40 movement=+3
+ 6 LAB-006 library-search       score= 61.20 movement=-1
+ 7 LAB-003 archive-test         score= 60.00 movement=-6
+ 8 LAB-010 research-api         score= 58.20 movement=+1
+ 9 LAB-009 training-vm          score= 57.00 movement=-6
+10 LAB-007 metrics-internal     score= 51.00 movement=+0
+
+double exploitation weight: top-five overlap 60%
+ 1 LAB-001 student-portal       score=124.60 movement=+5
+ 2 LAB-004 vpn-gateway          score=121.00 movement=+5
+ 3 LAB-005 staff-laptop-07      score= 98.80 movement=+1
+ 4 LAB-002 build-runner         score= 76.80 movement=-2
+ 5 LAB-006 library-search       score= 73.20 movement=+0
+ 6 LAB-010 research-api         score= 70.20 movement=+3
+ 7 LAB-008 payment-worker       score= 68.40 movement=+1
+ 8 LAB-003 archive-test         score= 60.00 movement=-7
+ 9 LAB-009 training-vm          score= 57.00 movement=-6
+10 LAB-007 metrics-internal     score= 51.00 movement=+0
+
+Synthetic scenario; ranking changes are not evidence of predictive accuracy.

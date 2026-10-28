@@ -1,0 +1,11 @@
+asset,owner,criticality,internet_exposed,vulnerability,title,severity,known_exploited,observed_on
+student-portal,Web services,5,yes,LAB-001,Outdated portal component,8.1,yes,2026-10-01
+build-runner,Development tools,4,no,LAB-002,Remote execution in build dependency,9.8,no,2026-10-01
+archive-test,Research support,1,no,LAB-003,Legacy test service,10.0,no,2026-10-01
+vpn-gateway,Network services,5,yes,LAB-004,Gateway authentication weakness,7.5,yes,2026-10-01
+staff-laptop-07,IT support,2,no,LAB-005,Document reader vulnerability,8.8,yes,2026-10-01
+library-search,Library systems,3,yes,LAB-006,Search component injection,8.2,no,2026-10-01
+metrics-internal,Infrastructure,3,no,LAB-007,Metrics endpoint disclosure,6.5,no,2026-10-01
+payment-worker,Finance systems,5,no,LAB-008,Dependency authorization flaw,7.4,no,2026-10-01
+training-vm,IT support,1,no,LAB-009,Unpatched training image,9.5,no,2026-10-01
+research-api,Research support,4,yes,LAB-010,API parser denial of service,6.7,no,2026-10-01

@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block title %}Import scan · Patchboard{% endblock %}{% block content %}
+<p class="eyebrow">SCAN INTAKE</p><h1>Import findings</h1><p>A complete batch is validated before any records are changed.</p>
+{% if error %}<pre class="error" role="alert">{{ error }}</pre>{% endif %}
+<form class="panel" method="post" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ session.csrf }}"><label>UTF-8 CSV · maximum 2 MiB / 5,000 findings<input type="file" name="file" accept=".csv" required></label><button>Validate and import</button></form>
+<h2>Use the included case first</h2><ol><li>Import <code>data/scan-01.csv</code>.</li><li>Open a finding and record a remediation decision.</li><li>Import <code>data/scan-02.csv</code> to inspect repeat observations.</li><li>Visit Ranking study and compare priorities.</li></ol>
+<aside><strong>Import contract</strong><p>Use the exact header in the sample CSV. Severity is 0–10; asset importance is 1–5; flags are <code>yes</code> or <code>no</code>. Dates must be ISO dates, never future dates. Vulnerability identifiers are scanner labels, not automatically verified CVEs.</p><p>Identity is asset + vulnerability. Resolved findings seen again reopen. Missing findings remain unchanged: absence from an incomplete scan is not proof of remediation. Older observations, duplicate pairs, and conflicting asset metadata are rejected. Asset names must stay consistent between scans.</p></aside>
+{% endblock %}

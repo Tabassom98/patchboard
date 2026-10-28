@@ -1,0 +1,6 @@
+asset,owner,criticality,internet_exposed,vulnerability,title,severity,known_exploited,observed_on
+student-portal,Web services,5,yes,LAB-001,Outdated portal component,8.1,yes,2026-10-15
+vpn-gateway,Network services,5,yes,LAB-004,Gateway authentication weakness,7.5,yes,2026-10-15
+library-search,Library systems,3,no,LAB-006,Search component injection,8.2,no,2026-10-15
+research-api,Research support,4,yes,LAB-010,API parser denial of service,6.7,no,2026-10-15
+research-api,Research support,4,yes,LAB-011,Unrestricted diagnostic endpoint,5.3,no,2026-10-15

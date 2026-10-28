@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Patchboard{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="{{ url_for('index') }}"><b class="brand-mark">P/</b>Patchboard<span>VULNERABILITY OPERATIONS</span></a>
+<nav aria-label="Main"><a class="{% if request.endpoint in ['index','detail'] %}active{% endif %}" href="{{ url_for('index') }}">Findings</a><a class="{% if request.endpoint=='upload' %}active{% endif %}" href="{{ url_for('upload') }}">Scan intake</a><a class="{% if request.endpoint=='compare' %}active{% endif %}" href="{{ url_for('compare') }}">Ranking study</a></nav><span class="header-status">● Local workspace</span></header>
+<div class="context"><strong>SYNTHETIC DATA</strong><span>Single operator · No live scanner connection</span><time>{{ today }}</time></div>
+<main id="main">{% for message in get_flashed_messages() %}<p class="notice" role="status">{{ message }}</p>{% endfor %}{% block content %}{% endblock %}</main>
+<footer>Patchboard / A study of remediation priorities. Scores explain a policy choice; they do not predict compromise.</footer></body></html>

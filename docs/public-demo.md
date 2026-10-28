@@ -11,3 +11,5 @@ python scripts/build_demo.py
 ```
 
 Output is in demo/. Serve this directory with a static host. Dates, counts, and scores reflect the exported snapshot, not current vulnerability intelligence. The full application must be run locally to import scans and save investigation decisions.
+
+The included GitHub Pages workflow runs tests, regenerates the export, and publishes only demo/. Enable GitHub Actions as the Pages source in the repository settings. This is a static demonstration; no Flask process or SQLite database runs on GitHub Pages.
